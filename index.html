@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Webpage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1>🌟 My Stylish Webpage</h1>
+    <nav>
+      <button onclick="showSection('home')">Home</button>
+      <button onclick="showSection('contact')">Contact</button>
+      <button onclick="showSection('todo')">To-Do</button>
+      <button onclick="showSection('gallery')">Gallery</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="page-section">
+      <h2>Welcome to My Webpage</h2>
+      <p>This project includes a contact form, to-do list, and an image gallery.</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="page-section">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required /><br />
+        <input type="email" id="email" placeholder="Your Email" required /><br />
+        <input type="tel" id="phone" placeholder="Your Phone" /><br />
+        <input type="text" id="address" placeholder="Your Address" /><br />
+        <button type="submit">Submit</button>
+      </form>
+      <div id="contactOutput" class="output-box"></div>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todo" class="page-section">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="page-section">
+      <h2>Image Gallery</h2>
+      <input type="file" id="imageInput" accept="image/*" />
+      <button onclick="addImage()">Upload Image</button>
+      <div id="galleryContainer"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
